@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center">
+    <p id="quote"></p>
+    <button id = "button">New quote</button>
+  </div>
+  
+  <script>
+    //generate quote
+    //array called quotes
+    const quotes = ["You Don't Have Time To Think Up There. You Think, You're Dead",
+        "The Pentagon Sees To It That I Know More Than You.",
+        "That Was Some Of The Best Flying I've Seen To Date — Right Up To The Part Where You Got Killed.",
+        "Remember Boys, No Points For Second Place."  ];
+    //log quote
+    var quote_length = quotes.length;
+    console.log("There are", quote_length, "quotes.")
+
+    function generateQuote(){
+      var x = Math.floor(Math.random() * quote_length);
+      document.getElementById("quote").innerHTML = quotes[x];
+      console.log("Displaying quote", x);
+    }
+
+    window.onload = function(){
+      generateQuote();
+      const button = document.getElementById("button");
+      button.addEventListener("click", generateQuote);
+    }
+
+  </script>
+</body>
+</html>
