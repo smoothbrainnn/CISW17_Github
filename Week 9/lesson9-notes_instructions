@@ -1,0 +1,52 @@
+# Lesson 9 Notes
+
+Create a webpage with your outline, and notes from Lessons 19, 20, and 21 in Sams Teach 
+Yourself HTML, CSS, and JavaScript.
+
+You will upload a single html file named lesson9-notes.html.
+
+## Create the HTML File
+
+Change the title to be the assignment name.
+
+Ensure that your comment block is updated with your student information in the head.
+```
+<!--
+  Your Name
+   Assignment Name
+   Date you complete the assignment
+-->
+```
+
+Create a Heading 2 for each Lesson.
+
+Create a summary for each lesson, at least two paragraphs long.
+
+List the "What You'll Learn in This Lesson" as bullet points under each area.
+
+Additionally, add the following items under each category:
+
+  * Lesson 19: Create a section clearly defining ways to write comments in JavaScript
+  * Lesson 20: List the Best Practices for JavaScript as a heading 3, and the listed 
+  bullets in an unordered list
+  * Lesson 21: List properties for the document object, list Document Methods, list 
+  Basic Node Properties
+
+Create a More Resources section below with useful JavaScript links. You can start with 
+the links listed on the Module 9 Learning Guide's "Additional Resources".
+
+## Add CSS and Styling Elements
+
+We will start using [W3.CSS](https://www.w3schools.com/w3css/default.asp) as a standard template to build from. Create a stylesheet link to use W3.CSS.
+
+Open the [W3.CSS](https://www.w3schools.com/w3css/default.asp) site and follow the instructions to add your stylesheet.
+
+Select a [W3.CSS color class](https://www.w3schools.com/w3css/w3css_colors.asp) for your headings, and add that in either your style tag or directly in the h2 class.
+
+Use [W3.CSS lists](https://www.w3schools.com/w3css/w3css_lists.asp) to create bordered lists on your page.
+
+Ensure that your page is mobile responsive.
+
+Ensure that your page can be easily read when the browser is full screen.
+
+Ensure that your website is centered in the browser.

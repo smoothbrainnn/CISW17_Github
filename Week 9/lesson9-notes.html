@@ -1,0 +1,175 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Web Design Notes</title>
+   <!--
+    Justin Serafin
+    Module 9 Lesson Notes
+    4/26/2023
+   -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <style>
+    body {
+      font-size: 18px;
+      line-height: 1.5em;
+      max-width: 85%;
+      margin: auto;
+      background-color: blanchedalmond;
+      font-family: Helvetica, sans-serif;
+    }
+
+    h1, h2{
+      font-weight: 400;
+      padding: 10px;
+    }     
+    
+    @media screen and (min-width: 750px) {
+      h1 {font-size: 1.5em;}
+      h2 {font-size: 1.25em;}
+    } 
+
+    @media screen and (max-width: 749px) {
+      body{line-height: 1.2em;}
+      h1 {font-size: 1.25em;}
+      h2 {font-size: 1.1em;} 
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Module 9 Notes</h1>
+
+  <h2 class="w3-red">Lesson 19: Understanding Dynamic Websites and HTML5 Applications</h2>
+
+  <p>What You’ll Learn in This Lesson</p>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>How to conceptualize different types of dynamic content</li>
+    <li>How to include JavaScript in your HTML</li>
+    <li>How to display randomized text with JavaScript</li>
+    <li>How to change images by using JavaScript and user events</li>
+    <li>How to begin thinking ahead to putting all the pieces together to create HTML5 
+    applications</li>
+  </ul>
+
+  <!--Summary-->
+  <p>
+    JavaScript is a very popular scripting language used in web browsers that runs client-side as 
+    opposed to server-side. Like with CSS, JavaScript can be included on a website via an external
+    .js file or directly in the main HTML file using the &lt;script&gt; tag. JavaScript can be used
+    to create dynamic content on a webpage, such as loading a random quote every time the page is
+    loaded. An important part of JavaScript is the use of arrays, which are data scructures that
+    contain a list of similar things, like quotes, fruits, or cars. Other common JavaScript scripts
+    include the concatenation operator "+" to combine strings, and Math functions like "Math.floor()"
+    and "Math.random()" to generate random numbers. Yet another common use of JavaScript is to
+    manipulate the document object model (DOM) to dynamically change the appearance of a webpage. DOM
+    is a framework in JavaScript allows you to access and change a web element dynamically.
+  </p>
+
+  <p>
+    One approach to imprementing JavaScript, Unobstrutive JavaScript, requires that JavaScript on a
+    webpage should be usable, easily degradable, accessible, and separate from HTML and CSS. This
+    approach allows to be effective in delivering dynamic web content across a wider range of devices. 
+    Using an ID attribute in HTML allows you to separate the script from the main HTML, and you can
+    reference the HTML element using the DOM. The "onclick" attribute in an HTML tag allows you to tie 
+    JavaScript to a user click on a page. Developing a modern website requires the combination of the 
+    latest features of HTML5 and JavaScript that not only loads dynamic content on the webpage, but 
+    also communicates with server-side languages to fetch content from a server.
+  </p>
+
+  <h2 class="w3-red">Lesson 20: Getting Started with JavaScript Programming</h2>
+  <p>What You’ll Learn in This Lesson</p>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>How and why to organize scripts using functions</li>
+    <li>What objects are and how JavaScript uses them</li>
+    <li>How JavaScript can respond to events</li>
+    <li>How and when to use conditional statements and loops</li>
+    <li>How browsers execute scripts in the proper order</li>
+    <li>Basic syntax rules for avoiding JavaScript errors</li>
+    <li>What JSON is and how it can be used</li>
+  </ul>
+
+  <!--Summary-->
+  <p>
+    Statements, sections of code that performs a single action, are the basic units of a JavaScript
+    program, and they can be combined as a single unit called a function. Functions can be called
+    by themselves or can be called with expressions, also known as parameters. Data can be stored in
+    variables with "var", the name of the variable, and the value the variable it's assigned. Both 
+    data and functions can be stored in objects, which are data constructs that can represent tangible
+    things like people, or abstract things like math and dates. You can create your own custom objects
+    or use pre-made objects. 
+  </p>
+
+  <p>
+    JavaScript supports conditional statements, which contains code that only executes if a certain
+    criteria is met, and also supports loops, which contain code that maybe execute multiple
+    consecutive times depending on defined criteria. Event handlers work similarly to if statements, 
+    but they execute code based on user interaction rather than variable data. Scripts contained in 
+    the &lt;head&gt; tag are executed before scripts in the &lt;body&gt; tag, and event handlers
+    only execute when their event occurs. JavaScript follows certain rules of syntax, such as its 
+    keywords only being lowercase, built-in objects being uppercase, DOM objects following camel
+    casing, and variable names only starting with the underscore character or a letter. There are 
+    best practices when writing JavaScript, such as making a lot of comments with "//" and "/**/",
+    restricting, using a semicolon to mark the end of a statement, using external JavaScriptf files
+    as much as possible, keeping JavaScript browser-agnostic, and to keeping JavaScript to optional
+    web enhancements that don't affect core functionality of a web page. Finally, JSON, or JavaScript
+    Object Notation, is a streamlined way to store data in a special object that pairs parameters with
+    its corresponding value.
+  </p>
+
+  <h2 class="w3-red">Lesson 21: Working with the Document Object Model (DOM)</h2>
+  <p>What You’ll Learn in This Lesson</p>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>How the W3C DOM standard makes dynamic pages easier to control</li>
+    <li>The basics of the standard DOM objects: window, document, history, and location</li>
+    <li>How to work with DOM nodes, parents, children, and siblings</li>
+    <li>How to access and use the properties of DOM nodes</li>
+    <li>How to access and use DOM node methods</li>
+    <li>How to control element positioning with JavaScript</li>
+    <li>How to hide and show elements with JavaScript</li>
+    <li>How to use JavaScript to add and modify text within a page</li>
+  </ul>
+  
+  <!--Summary-->
+  <p>
+    The document object model, or DOM, is a hierarchy of objects that represent the web browser and the 
+    web document, i.e. the web page. At the top of the hierarchy is the window object, representing the
+    broswer window, and important objects below the window object are the document, location, history,
+    and the navigator objects. The document object represents the web document, and by using the "."
+    operator, you can access properties of the web document, including its URL, title, last modified
+    date, and images in the document. Other important properties of the web document include the write
+    method, which writes text to the web document, and the link object, a child object of document which 
+    stores data about links on the page. The history object keeps track of the pages that have been visited
+    in the web browser, and contains methods to navigate forward, backward to jump directly to those pages.
+  </p>
+
+  <p>
+    Another window child object, location, provides information about the URL of the currently loaded webpage,
+    including the hostname, port, and pathname and has methods to reload and assign a new URL for the browser.
+    Going back to the hierarchy of the DOM, the arrangement of the DOM is in a tree-like pattern, where each
+    object can also be described as a node, and all objects share either a parent, child, or sibling 
+    relationship with another object. Each node have properties that they all share, including the node's
+    name, its value for text nodes, and the HTML content of the node itself. A node has properties and
+    methods that relate to other nodes. Important methods for JavaScript programming are in the document node,
+    which includes getting a web element by a defined ID (getElementById) so you can change and modify the
+    element dynamically.
+  </p>
+
+  <h2 class="w3-red">Additional Resources on JavaScript</h2>
+
+  <ul class="w3-ul">
+    <li class="w3-hover-red"><a href="https://www.w3schools.com/jsref/default.asp" target="_blank">W3Schools JavaScript and HTML DOM 
+    Reference</a></li>
+    <li class="w3-hover-red"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">MDN Web Docs on 
+    JavaScript</a></li>
+    <li class="w3-hover-red"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" 
+    target="_blank">MDN JavaScript tutorial</a></li>
+    <li class="w3-hover-red"><a href="https://www.w3schools.com/js/default.asp" target="_blank">W3Schools JavaScript tutorial</a>
+    </li>
+    <li class="w3-hover-red"><a href="https://curlie.org/Computers/Programming/Languages/JavaScript/" target="_blank">Curlie Web  
+    Directory on JavaScript</a></li>
+  </ul>
+
+</body>
+</html>
