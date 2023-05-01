@@ -1,0 +1,139 @@
+<!--
+Lesson 10 Notes
+
+Create a webpage with your outline, and notes from Lesson 22: Using JavaScript Variables, Strings, and Array.
+Create the HTML File
+
+Change the title to the assignment name.
+
+Ensure that your comment block is updated with your student information in the head.
+
+   Your Name
+   Assignment Name
+   Date you complete the assignment
+
+Create a Heading 1 for the lesson name.
+
+Create a summary for lesson that is at least two paragraphs long.
+
+List the "What You'll Learn in This Lesson" as an unordered list. Remove any non-html characters.
+
+Include the following items:
+
+  Choosing Variable Names and the rules used
+  Define global and local variables
+  List ways to assign value to variables
+  List ways to increment and decrement variables
+  Create a table of the JavaScript Operators, their description, and an example of each one
+  List the JavaScript Data Types
+  Define a String Object
+  Define an Array
+  Define a Function
+  Describe how to return a value from a function
+  Define an Object
+  Define the Math Object
+  List methods to round and truncate
+  Provide a code example to generate a random number
+  Define the Date object
+
+Add CSS and Styling Elements
+
+Add W3.CSS
+
+Links to an external site. as a stylesheet.
+
+Select a W3.CSS color class
+
+Links to an external site. for your headings & sub-headings.
+
+Use W3.CSS lists
+
+Links to an external site. to create bordered lists on your page.
+
+Ensure that your page is mobile responsive.
+
+Ensure that your page can be easily read when the browser is full screen.
+
+Ensure that your website is centered in the browser.
+-->
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 10 Notes</title>
+   <!--
+    Justin Serafin
+    Module 10 Lesson Notes
+    4/26/2023
+   -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <style>
+    body {
+      font-size: 18px;
+      line-height: 1.5em;
+      max-width: 85%;
+      margin: auto;
+      background-color: blanchedalmond;
+      font-family: Helvetica, sans-serif;
+    }
+
+    h1, h2{
+      font-weight: 400;
+      padding: 10px;
+    }     
+    
+    @media screen and (min-width: 750px) {
+      h1 {font-size: 1.5em;}
+      h2 {font-size: 1.25em;}
+    } 
+
+    @media screen and (max-width: 749px) {
+      body{line-height: 1.2em;}
+      h1 {font-size: 1.25em;}
+      h2 {font-size: 1.1em;} 
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Module 10 Notes</h1>
+
+  <h2 class="w3-red">Lesson 19: Understanding Dynamic Websites and HTML5 Applications</h2>
+
+  <p>What You’ll Learn in This Lesson</p>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>How to conceptualize different types of dynamic content</li>
+    <li>How to include JavaScript in your HTML</li>
+    <li>How to display randomized text with JavaScript</li>
+    <li>How to change images by using JavaScript and user events</li>
+    <li>How to begin thinking ahead to putting all the pieces together to create HTML5 
+    applications</li>
+  </ul>
+
+  <!--Summary-->
+  <p>
+    JavaScript is a very popular scripting language used in web browsers that runs client-side as 
+    opposed to server-side. Like with CSS, JavaScript can be included on a website via an external
+    .js file or directly in the main HTML file using the &lt;script&gt; tag. JavaScript can be used
+    to create dynamic content on a webpage, such as loading a random quote every time the page is
+    loaded. An important part of JavaScript is the use of arrays, which are data scructures that
+    contain a list of similar things, like quotes, fruits, or cars. Other common JavaScript scripts
+    include the concatenation operator "+" to combine strings, and Math functions like "Math.floor()"
+    and "Math.random()" to generate random numbers. Yet another common use of JavaScript is to
+    manipulate the document object model (DOM) to dynamically change the appearance of a webpage. DOM
+    is a framework in JavaScript allows you to access and change a web element dynamically.
+  </p>
+
+  <p>
+    One approach to imprementing JavaScript, Unobstrutive JavaScript, requires that JavaScript on a
+    webpage should be usable, easily degradable, accessible, and separate from HTML and CSS. This
+    approach allows to be effective in delivering dynamic web content across a wider range of devices. 
+    Using an ID attribute in HTML allows you to separate the script from the main HTML, and you can
+    reference the HTML element using the DOM. The "onclick" attribute in an HTML tag allows you to tie 
+    JavaScript to a user click on a page. Developing a modern website requires the combination of the 
+    latest features of HTML5 and JavaScript that not only loads dynamic content on the webpage, but 
+    also communicates with server-side languages to fetch content from a server.
+  </p>
+</body>
+</html>
