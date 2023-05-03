@@ -65,13 +65,13 @@ Ensure that your website is centered in the browser.
    <!--
     Justin Serafin
     Module 10 Lesson Notes
-    4/26/2023
+    5/3/2023
    -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
   <style>
     body {
-      font-size: 18px;
-      line-height: 1.5em;
+
+      line-height: 2em;
       max-width: 85%;
       margin: auto;
       background-color: blanchedalmond;
@@ -81,17 +81,24 @@ Ensure that your website is centered in the browser.
     h1, h2{
       font-weight: 400;
       padding: 10px;
-    }     
+    }
+
+    h1{
+      text-align: center;
+    }
     
     @media screen and (min-width: 750px) {
-      h1 {font-size: 1.5em;}
-      h2 {font-size: 1.25em;}
+      h1 {font-size: 2em;}
+      h2 {font-size: 1.75em;}
+      h3 {font-size: 1.50em;}
+      p, ul { font-size: 1.25em;}
     } 
 
     @media screen and (max-width: 749px) {
-      body{line-height: 1.2em;}
-      h1 {font-size: 1.25em;}
-      h2 {font-size: 1.1em;} 
+      h1 {font-size: 1.75em;}
+      h2 {font-size: 1.50em;}
+      h3 {font-size: 1.25em;}
+      p, ul { font-size: 1.1em;}
     }
   </style>
 </head>
@@ -99,41 +106,241 @@ Ensure that your website is centered in the browser.
 <body>
   <h1>Module 10 Notes</h1>
 
-  <h2 class="w3-red">Lesson 19: Understanding Dynamic Websites and HTML5 Applications</h2>
+  <h2 class="w3-red">Lesson 22: Using JavaScript Variables, Strings, and Arrays</h2>
 
   <p>What You’ll Learn in This Lesson</p>
   <ul class="w3-ul w3-border w3-sand">
-    <li>How to conceptualize different types of dynamic content</li>
-    <li>How to include JavaScript in your HTML</li>
-    <li>How to display randomized text with JavaScript</li>
-    <li>How to change images by using JavaScript and user events</li>
-    <li>How to begin thinking ahead to putting all the pieces together to create HTML5 
-    applications</li>
+    <li>How to name, declare, and assign variables</li>
+    <li>How to choose whether to use local or global variables</li>
+    <li>How to convert between different data types</li>
+    <li>How to create and use String objects</li>
+    <li>How to create and use arrays of numbers and strings</li>
+    <li>How to define, call, and return values from functions</li> 
+    <li>How to use object properties and values</li> 
+    <li>How to define and use object methods</li> 
+    <li>How to use the Math object’s methods</li> 
+    <li>How to use new and this keywords to work with objects</li> 
+    <li>How to use the Date object to work with dates</li> 
   </ul>
 
   <!--Summary-->
   <p>
-    JavaScript is a very popular scripting language used in web browsers that runs client-side as 
-    opposed to server-side. Like with CSS, JavaScript can be included on a website via an external
-    .js file or directly in the main HTML file using the &lt;script&gt; tag. JavaScript can be used
-    to create dynamic content on a webpage, such as loading a random quote every time the page is
-    loaded. An important part of JavaScript is the use of arrays, which are data scructures that
-    contain a list of similar things, like quotes, fruits, or cars. Other common JavaScript scripts
-    include the concatenation operator "+" to combine strings, and Math functions like "Math.floor()"
-    and "Math.random()" to generate random numbers. Yet another common use of JavaScript is to
-    manipulate the document object model (DOM) to dynamically change the appearance of a webpage. DOM
-    is a framework in JavaScript allows you to access and change a web element dynamically.
+    Three important aspects of JavaScript programming are variables, strings, and arrays. Variables can
+    store data and have several rules regarding its naming, including only having letters, numbers and
+    the underscore character, and starting with a letter or the underscore character, and fitting
+    variable name on one line. Where  variables can be used is based on scope: global variables can be 
+    called anywhere, but local variables can only be used within a function that the are crated in. 
+    While using <code>var</code> is optional for global variables, it is a good practice to use 
+    <code>var</code> for declaring all variables. There are several ways to incrementing or decrementing 
+    variables, including using <code>+=</code>/<code>-=</code> and <code>++</code>/<code>--</code>.
   </p>
 
   <p>
-    One approach to imprementing JavaScript, Unobstrutive JavaScript, requires that JavaScript on a
-    webpage should be usable, easily degradable, accessible, and separate from HTML and CSS. This
-    approach allows to be effective in delivering dynamic web content across a wider range of devices. 
-    Using an ID attribute in HTML allows you to separate the script from the main HTML, and you can
-    reference the HTML element using the DOM. The "onclick" attribute in an HTML tag allows you to tie 
-    JavaScript to a user click on a page. Developing a modern website requires the combination of the 
-    latest features of HTML5 and JavaScript that not only loads dynamic content on the webpage, but 
-    also communicates with server-side languages to fetch content from a server.
+    JavaScript uses common arithmetic operators and the modulo operator to perform operations, and it
+    operates by arithmetic precendence rules. The most common data types used in JavaScript are numbers
+    boolean, string, and null. A JavaScript variable can store more than one type of data after it's 
+    declared, i.e. it can store a number and later store a string. JavaScript usually handles conversion
+    between data types as necessary, but there are some methods, <code>parseInt</code> and 
+    <code>parseFloat</code>, that converts a number stored as a string, as a numerical value. String 
+    variables can be declared with either <code>var</code> or the <code>new</code> keyword, which is 
+    use to create new objects.
   </p>
+
+  <p>
+    The addition operator, <code>+</code>, can be used to combine, or concatenate, strings, as well as 
+    the increment operator <code>+=</code>. Common methods used with a string object include the 
+    <code>length</code> method, which outputs the number of characters in a string, <code>toUpperCase</code> 
+    and <code>toLowerCase</code>, which converts all characters to upper case and lower case respectively, and 
+    <code>substring</code>, which accesses a certain part of a string. Other notable string methods include 
+    <code>charAt</code>, which returns the character at a specified index, and <code>indexOf</code>, which
+    returns the index of a specified substring in a string. Arrays are a type of object consisting of a 
+    group of data items, including numbers or strings. You can declare a new array with the <code>new</code>
+    word, or simply specify a new variable name and assign the array's contents within brackets 
+    ("<code>[]</code>").
+  </p>
+
+  <p>
+    Like strings, arrays have a <code>length</code> method, which gives you the number of items, or elements, 
+    in the array. You can access an array element of specifying the name of the array and the index of the 
+    element in brackets. For string arrays, you can use <code>split</code> to take a string with spaces and
+    split it into a string array for all strings between spaces. <code>join</code> allows you to join 
+    elements of a string array into one string. Another array method, <code>sort</code> allows you to 
+    arrange an array in alphabetical order. 
+  </p>
+
+  <p>
+    To sort numerical arrays, you insert a number comparison function so the sort function knows if one
+    number belongs before or after another. Speaking of functions, they are a group of JavaScript statements
+    that are grouped together and be called by its name. Functions can have parameters, which are variables
+    that are passed from the main HTML page into the function for operations. Functions can also have 
+    return values, which will be substituted for the calling function. 
+  </p>
+
+  <p>
+    Besides DOM objects and the built-in objects like strings and arrays, you can also define custom objects.
+    You define a function, referred to as a constructor in this context, to create a custom object. Any 
+    parameters defined in the function can be used initialize the values of the object's properties. If you
+    want the parameters and the property's name to be the same, you must use the <code>this</code> keyword
+    to distinguish the parameters of an object and the properties of the object. To define a method for an 
+    object, you must define a separate function then assign the function to a method of the object.
+  </p>
+
+  <p>
+    By using the <code>prototype</code> keyword, you can define a new function or variable and assign it as
+    a new variable and method of an existing object. An important built-in JavaScript object is the 
+    <code>Math</code> object. Some methods included in the <code>Math</code> object include the 
+    <code>ceil</code>, <code>floor</code>, and the <code>round</code> methods, which rounds up, rounds down, 
+    and rounds a number to the nearest integer respectively. Another important method is the 
+    <code>random</code> method, which generates a random number between 0 and 1. Another important object for 
+    JavaScript is the <code>Date</code> object which can store dates in several formats. There are many 
+    methods for setting dates, accessing parts of a date object, and converting date object to strings.
+  </p>
+
+  <h2 class="w3-red">JavaScript Variables, Strings, and Arrays Reference</h2>
+
+  <h3>Rules for choosing variable names</h3>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>Variable names can only include letters of the alphabet, numbers, or the underscore 
+    character.</li>
+    <li>The first character of the variable name must be either a letter or 
+    an underscore.</li>
+    <li>Variable names are case sensitive; for example, <code>totalnum</code>, 
+    <code>Totalnum</code>, and <code>TotalNum</code> are interpreted as 
+    separate variable names.</li>
+    <li>There is no official limit on the length of a variable name, but it 
+    must fit on one line.</li>
+  </ul>
+
+  <h3>Global and local variables</h3>
+  <p> Global variables can be called anywhere, but local variables can only be used within a function that 
+  the are crated in. </p>
+
+  <h3>Ways to assign value to variables</h3>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>Using the keyword <code>var</code></li>
+    <li>Using the keyword <code>let</code></li>
+    <li>Using the keyword <code>const</code></li> 
+    <li>Using no keyword and assigning a value to a variable name (for global variables)</li>
+  </ul>
+
+  <h3>Ways to increment and decrement variables</h3>
+  <ul>
+    <li>Using the assignment operator to take a variable and add or subtract a new value (x = x + 1,
+    x = x - 1)</li>
+    <li>Using the shorthand operators <code>+=</code>/<code>-=</code> which are equivalent to the above
+    value assignment examples respectively (x += 1, x -= 1)</li>
+    <li>Using the shorthand operators <code>++</code>/<code>--</code> which are equivalent to 
+    incrementing or decrementing a variable by 1 only, respectively.</li>
+  </ul>
+
+  <h3>Common JavaScript Operators</h3>
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>Operator</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>Concatenate strings</td>
+      <td><code>message="this is" + " a test";</code></td>
+    </tr>
+    <tr>
+      <td>+</td>
+      <td>Add</td>
+      <td><code>result = 5 + 7;</code></td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>Subtract</td>
+      <td><code>score = score − 1;</code></td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>Multiply</td>
+      <td><code>total = quantity * price;</code></td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>Divide</td>
+      <td><code>average = sum / 4;</code></td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>Modulo</td>
+      <td><code>remainder = sum % 4;</code></td>
+    </tr>
+    <tr>
+      <td>++</td>
+      <td>Increment</td>
+      <td><code>tries++;</code></td>
+    </tr>
+    <tr>
+      <td>--</td>
+      <td>Decrement</td>
+      <td><code>total−−;</code></td>
+    </tr>
+  </table>
+
+  <h3>JavaScript Data Types</h3>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>Numbers</li>
+    <li>Boolean</li>
+    <li>String</li>
+    <li>Null (for undefined variables)</li> 
+  </ul>
+
+  <h3>What is a <code>string</code> object?</h3>
+  <p>
+    A string object is a group of data and methods associated with a string, which is a group of characters.
+  </p>
+
+  <h3>What is an array?</h3>
+  <p>
+    An array is a numbered group of data items of the same data type.
+  </p>
+
+  <h3>What is a function?</h3>
+  <p>
+    A function is a group of statements in a block that can be called and reused multiple times in code.
+  </p>
+
+  <h3>How to return a value from a function</h3>
+  <p>
+    To return a value from a function, you use the <code>return</code> keyword as the last line in the 
+    function, followed by the value you want to return. You'll need to pass at least one value as a 
+    parameter in a function to return a value.
+  </p>
+
+  <h3>What is an object?</h3>
+  <p>
+    A object is a group of data items, which can be of multiple data types, and functions that are 
+    usually related together logically.
+  </p>
+
+  <h3>What is a <code>Math</code> object?</h3>
+  <p>
+    A math object is a group of common mathematical constants, like pi, and operations, like rounding
+    and generating random number.
+  </p>
+
+  <h3>What is a <code>Math</code> object?</h3>
+  <p>
+    A math object is a group of common mathematical constants, like pi, and operations, like rounding
+    and generating a random number between 0 and 1.
+  </p>
+
+  <h3>How to generate a random number between 1 and n?</h3>
+  <p>The following code allows you to generate a random number between 1 and n:</p>
+  <code>Math.ceil(Math.random() * n);</code>
+  <p>or</p>
+  <code>Math.floor(Math.random() * n) + 1;</code>
+
+  <h3>What is a <code>Date</code> object?</h3>
+  <p>
+    A date object is a group of date properties and methods that allows you to store dates in multiple
+    formats, output and modify parts of the date object, and to convert the date object to a string.
+  </p>
+
 </body>
 </html>
