@@ -96,7 +96,9 @@
     loops, because if the condition expression isn't properly define, then you'll have an 
     infinite loop. The keyword <code>break</code> helps you exit a loop statement, regardless of
     whether the condition expression has become false. <code>continue</code> is a keyword that allows
-    you to start at the top of the loop block, regardless of other code below it.
+    you to start at the top of the loop block, regardless of other code below it. Another type of loop
+    allows you to use the <code>for</code> statement to navigate properties of an object. Loops are
+    commonly used to traverse arrays.
   </p>
 
   <h2 class="w3-red">Lesson 24: Responding to Events and Using Windows</h2>
@@ -115,29 +117,109 @@
 
   <!--Summary-->
   <p>
-
+    A script that you create and use to detect and respond to an event, like a user clicking a button,
+    is generally referred to as an event handler. Event handlers can be directly embedded as an 
+    attribute to a web element and can also call functions in JavaScript. To add multiple functions
+    to trigger in response to an event, you can trigger them using the <code>addEventListener</code> 
+    method, which has several events that the object can "listen" for, from the DOM object. A built-in
+    object, <code>event</code>, can help you modify the listening event such that a function or code
+    only triggers when certain keys are pressed, or on a certain part of the page. Common events
+    for which you can add event listeners is moving the mouse over a web element, clicking on a link,
+    pressing a key, and loading a webpage.
   </p>
 
   <p>
-
+    A common command to execute in reponse to an event is changing the appearance of a web element in
+    a <code>div</code>, such that certain certain context is shown or hidden when clicked. The 
+    <code>Window</code> object allows you to change the properties of the window that a web page is
+    opened in, including closing windows and opening new windows. One use case of the <code>Window</code> 
+    object is resizing and moving the windows using the <code>moveTo</code>, <code>moveBy</code>, 
+    <code>resizeTo</code>, and <code>resizeBy</code> methods. Another useful method of the 
+    <code>Window</code> object is the <code>setTimeout</code> method, which allows to delay the
+    execution of code after a defined amount of time. Finally, there are methods for providing dialog
+    boxes to simply show messages, confirm a user event, and to prompt the user for text input.
   </p>
 
   <h2 class="w3-red">JavaScript Conditions, Loops, and Event Handlers Reference</h2>
-  <!--
 
-  <code></code>
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">What is a conditional statement?</h3>
+  <p>
+    A conditional statement is a line or block of code that only executes when a certain criteria is 
+    met, usually a comparison of numerical values.
+  </p>
 
-  Include the following items:
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">The conditional operators</h3>
+  <ul>
+    <li>== — Is equal to</li>
+    <li>!= — Is not equal to</li>
+    <li>&lt; — Is less than</li>
+    <li>&gt; — Is greater than</li>
+    <li>&gt;= — Is greater than or equal to</li>
+    <li>&lt;= — Is less than or equal to</li>
+  </ul>
 
-    Define a conditional statement
-    List the available conditional operators
-    Provide an example using multiple conditional statements
-    Explain a possible use of looping
-    Define an event handler
-    Provide an example of a "click" handler
-    How can you make your page listen for keystrokes?
-    List the properties of the Window object
-  -->
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">An example of multiple conditional expressions</h3>
+  <p>
+    Multiple conditional expressions can be chained together for a single conditional
+    statement using the logical operators <code>&&</code> and <code>||</code>. An
+    example is shown below.
+  </p>
+  <pre><code>
+    if ((phone == "") || (email == "")) {
+      alert("Something Is Missing!");
+    }
+  </code></pre>
+
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">A use case of loops</h3>
+  <p>
+    A use case of loops is to repeatedly prompt the user to enter information until the user enters
+    a special character to indicate that they finished entering information.
+  </p>
+
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">What is an event handler?</h3>
+  <p>
+    An event handler is a script that is executed in response to an event, such as user moving the
+    mouse over a certain location, or clicking on something.
+  </p>
+
+
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">"Click" event handler example</h3>
+  <p>
+    The following example shows a function <code>mousealert</code> that is triggered when a web
+    element with an id of <code>link1</code> is clicked on:
+  </p>
+
+  <code>document.getElementById("link1").addEventListener("click", mousealert);</code>
+
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">How can you make your page listen for keystrokes?</h3>
+  <p>
+    You can have your webpage listen for keystrokes by adding an event listener for 
+    <code>keypress</code> or <code>keydown</code> and defining a function with a conditional 
+    statement that looks for the desired keystroke. <code>event.key</code> can be used to "listen"
+    for the desired key.
+  </p>
+
+  <h3 class ="w3-panel w3-blue w3-round-xlarge">The properties of the <code>Window</code> object</h3>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>
+      <code>window.closed</code> — Indicates whether the window has been closed. This makes sense 
+      only when you’re working with multiple windows because the current window contains the script 
+      and cannot be closed without ending the script.
+    </li>
+    <li>
+      <code>window.opener</code> — In a new window opened by a script, provides a reference to the 
+      window containing the script that opened it.
+    </li>
+    <li>
+      <code>window.outerHeight</code> and <code>window.outerWidth</code> — Specify the height and 
+      width, respectively, of the outside of a browser window.
+    </li>
+    <li>
+      <code>window.screen</code> — Provides a child object that stores information about the screen 
+      the window is in—its resolution, color depth, and so on.
+    </li>
+    <li><code>window.self</code> — Acts as a synonym for the current window object.</li>
+  </ul>
   
 </body>
 </html>
