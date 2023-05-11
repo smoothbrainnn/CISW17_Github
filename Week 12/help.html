@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Press h for help</title>
+  <!--
+    Justin Serafin
+    Assignment Name
+    Date
+  -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+
+<body class="w3-container w3-card">
+  <header class ="w3-center">
+    <h1>Press 'h' for help</h1>
+  </header>
+
+  <hr>
+
+  <div id="help" class="w3-container w3-gray ">
+    <ul class="w3-ul w3-hoverable">
+      <li>Make a webpage</li>
+      <li>Customize CSS</li>
+      <li>JS for the win!</li>
+    </ul>
+  </div>
+
+  <script>
+    help = document.getElementById("help");
+    help.style.visibility = "hidden";
+
+    function showHideHelp(e){
+      //show/hide "help" div when ? or h is pressed
+      if((e.keyCode == 72 || e.keyCode == 191) && help.style.visibility == "hidden"){
+        help.style.visibility = "visible";
+      }
+
+      else if((e.keyCode == 72 || e.keyCode == 191) && help.style.visibility == "visible"){
+        help.style.visibility = "hidden";
+      }
+
+    }
+
+    document.onkeydown = showHideHelp;
+  </script>
+
+</body>
+</html>
