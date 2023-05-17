@@ -1,0 +1,15 @@
+body{
+  background-color: #fefefe;
+  color: #0f0f0f;
+  margin: 0 auto;
+  font-family: 'Lucida Sans', 
+    'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 400px;
+  font-size: 24px;
+
+}
+
+#help{
+  margin-bottom: 16px;
+}

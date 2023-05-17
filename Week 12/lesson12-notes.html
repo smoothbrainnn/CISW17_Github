@@ -1,0 +1,165 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 11 Notes</title>
+   <!--
+    Justin Serafin
+    Module 11 Lesson Notes
+    5/3/2023
+   -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <style>
+    body{
+
+      line-height: 2em;
+      max-width: 85%;
+      margin: auto;
+      background-color: blanchedalmond;
+      font-family: Helvetica, sans-serif;
+    }
+
+    h1, h2{
+      font-weight: 400;
+      padding: 10px;
+    }
+
+    h1{
+      text-align: center;
+    }
+    
+    @media screen and (min-width: 750px) {
+      h1 {font-size: 2em;}
+      h2 {font-size: 1.75em;}
+      h3 {font-size: 1.50em;}
+      p, ul {font-size: 1.25em;}
+    } 
+
+    @media screen and (max-width: 749px) {
+      h1 {font-size: 1.75em;}
+      h2 {font-size: 1.50em;}
+      h3 {font-size: 1.25em;}
+      p, ul { font-size: 1.1em;}
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Module 12 Notes</h1>
+
+  <h2 class="w3-red">Lesson 25: JavaScript Best Practices</h2>
+
+  <p>What You’ll Learn in This Lesson</p>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>Best practices for creating unobtrusive scripts</li>
+    <li>The importance of separating content, presentation, and behavior</li>
+    <li>The importance of following web standards to create cross-browser scripts</li>
+    <li>How to read and display browser information</li>
+    <li>How to use feature sensing to avoid errors</li>
+    <li>How to support older, less compliant browser versions</li> 
+    <li>How to support non-JavaScript browsers</li> 
+  </ul>
+
+  <!--Summary-->
+  <p>
+    When creating scripts for webpages, there are best practices to adhere to unobtrusive scripting, which
+    refers to creating scripts that are easy to maintain and use. The first guideline to achieving this is
+    to only use JavaScript when necessary and see if a desired result can be achieved with HTML or CSS.
+    Another guideline is to keep your HTML, CSS and JavaScript files separate so a webpage can be easily
+    maintained and modified. In order to keep webpage loading times low, a third guideline is to link your
+    JavaScript file after your HTML code so that the webpage can be rendered before any scripts load, and
+    to keep your JavaScript code to one file, if possible. A final guidelines is to implement progressive
+    enhancement and graceful degradation to ensure compatibility with the widest range of devices, 
+    including devices using browsers not using JavaScript.
+  </p>
+
+  <p>
+    It is recommended to use the <code>addEventListener</code> method to keep JavaScript separate from 
+    HTML code and to have the ability to attach multiple events to execute with a single event. You can
+    add multiple if statements to attach events in a specific way depending on browser. There are certain
+    web standards that you should adhere to, including having web code that is broswer agnostic, robust
+    error handling, and documenting your code. Other standards include ensuring usability and accessibility
+    with the user, implementing design patterns that the user will recognize, and reusing code by abstraction.
+    You can use the <code>navigator</code> object to obtain information about the browser used to load a
+    webpage, and you can cater your JavaScript code for older browsers that might not be compatible with
+    generic code.
+  </p>
+
+  <p>
+    Instead of using the <code>navigator</code> to sense browser information, you can use if statements
+    to sense features. Checking for attach events methods is an example of sensing features. Despite most
+    broswers supporting JavaScript, there are some who don't, or some who turn on JavaScript in the ones
+    that do. In those cases, the <code>noscript</code> tag is available to display a message. It is
+    highly recommended to that to achieve unobtrusive scripting, JavaScript should be optional unless
+    absolutely necessary, and a webpage can still function without it.
+  </p>
+
+  <h3>Chapter Reflection</h3>
+  <p>
+    This lesson proved to be useful to me in terms of having a design philosophy for JavaScript. The first
+    this I will do is keep JavaScript to a minimum to keep webpage performance at a maximum. I will also
+    have an external JavaScript file so the file can be ignored for those who do not have JavaScript
+    enabled. Having generic code that works with multiple broswers, and only using feature sensing
+    or the <code>navigator</code> object for certain use cases, is another guideline I will adhere to.
+    Finally, another specific thing that I will do often when coding JavaScript is to use abstraction often
+    so that I can reuse code as much as possible.
+
+  </p>
+
+  <h2 class="w3-red">Lesson 26: Using Third-Party JavaScript Libraries and Frameworks</h2>
+
+  <p>What You’ll Learn in This Lesson</p>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>Why you might use a third-party JavaScript library or framework</li>
+    <li>The differences between libraries and frameworks</li>
+    <li>How and when you might use Angular, jQuery, React, and other third-party libraries</li>
+    <li>How to download and use a popular third-party JavaScript library in your applications</li>
+    <li>The benefits of JavaScript frameworks</li>
+  </ul>
+
+  <!--Summary-->
+  <p>
+    Third-party JavaScript libraries are an extension of the built-in objects in JavaScript: they help
+    a web developer to accomplish a complex task using a function that's already been created. Although
+    not without drawbacks, using third-party libraries means you'll be using code that is likely
+    well-tested and well-documented, and helps cut down on development time. One well-known third-party
+    library is jQuery, which is available both for download and for remote host use by Google. To access
+    a web element or class in jQuery, you use the "$" character and enclose the element or class in
+    parentheses and then in quotes. You also precede the name of the element with a "#" and "." for classes.
+  </p>
+
+  <p>
+    You can use "." to activate a method on jQuery object just like with a normal object. Another
+    well-known library is called Prototype, which improves basic JavaScript syntax and code, and
+    and can be downloaded or accessed remotely. Another notable library is script.aculo.us, a
+    spinoff of Prototype, which is used to simplify coding animations and transitions. A couple
+    more popular JavaScript libraries include Dojo and MooTools. Like with a custom made external
+    script, you use the <code>src</code> attribute of the <code>script</code> tag to add a 
+    third party library.
+  </p>
+
+  <p>
+    Compared to Javascript libraries, JavaScript frameworks are larger, more complicated, and
+    enforces a specific architectural pattern. One model, the model-view-controller pattern,
+    divides an application into three parts: one that holds information, one that requests
+    information, and one that sends information. In this model, a user manipulates the model such
+    that the view requests information from the controller, which sends the requested information
+    back to the model. Many JavaScript frameworks exist, including Angular, Backbone.js, Ember, 
+    Knockout, and React.
+  </p>
+
+  <h3>Chapter Reflection</h3>
+
+  <p>
+    This lesson opened my eyes to the usefulness of third-party JavaScript libraries and frameworks.
+    By using third-party JavaScript code, I can cut down on development time by using enhanced code
+    that is well-documented and often has simpler, more intuitive syntax. jQuery mobile is of 
+    particular interest, since many internet users are accessing webpages on their mobile devices.
+    I will also use CDN version of the libraries instead of downloading for hosting, due to the 
+    performance increase. The MVC model is an intresting model that will prove useful to keep in 
+    mind as I use these third-party libaries.
+  </p>
+
+</body>
+</html>
