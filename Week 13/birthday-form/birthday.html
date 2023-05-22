@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <!--
+    Justin Serafin
+    Assignment Name
+    Date
+  -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+</head>
+
+<body class="w3-container">
+  <header class ="w3-center">
+    <h1>Is it your birthday?</h1>
+  </header>
+  
+  <hr>
+
+  <div id ="message"></div>
+  <img src="" class="w3-img" id="birthday_image"> 
+
+  <!-- Comparing date objects -->
+  <script>
+    //Get current date
+    //Compare to inputted birthdate
+    bday = new Date(1977, 4, 3);
+    bday_month = bday.getMonth();
+    bday_day = bday.getDate();
+
+    today = new Date();
+    current_month = today.getMonth();
+    current_day = today.getDate();
+
+    message = document.getElementById("message");
+    // getelementbyid for birthday image
+
+    if (bday_month == current_month && bday_day == current_day){
+      message.innerHTML = "it's your birthday!"
+    }
+
+    else{
+      message.innerHTML = "it's not your birthday :("
+    }
+
+  </script>
+
+</body>
+</html>
+
+<!--
+  What you need for this project
+  <input type="date"></input>
+  <input type="submit"></input>
+-->
