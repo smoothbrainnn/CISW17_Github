@@ -1,0 +1,232 @@
+<!--
+Lesson 13 Notes
+
+Create a webpage with your outline, and notes from "Lesson 27: Working with Web-Based Forms".
+Create the HTML File
+
+Create an HTML file named lesson27-notes.html.
+
+Change the title to the "Lesson 27 Notes".
+
+Ensure that your comment block is updated with your student information in the head.
+
+   Your Name
+   Assignment Name
+   Date you complete the assignment
+
+Create a Heading 2 for the lesson name.
+
+Create a summary for the lesson that is at least two paragraphs long.
+
+List the "What You'll Learn in This Lesson" items as an unordered list. Remove any non-html characters.
+
+Create a Heading 3 for your chapter reflection.
+
+<h3>Reflection on the Lesson</h3>
+
+Create at least one paragraph with your thoughts about each lesson. Consider how you can apply the concepts and tools that are presented.
+CSS
+
+Add W3.CSS
+
+Links to an external site. as a stylesheet.
+
+Select a W3.CSS color class
+
+Links to an external site. for your headings & sub-headings.
+
+Use W3.CSS lists
+
+Links to an external site. to create bordered lists on your page.
+
+Ensure that your page is mobile responsive.
+
+Ensure that your page can be easily read when the browser is full screen.
+
+Ensure that your website is centered in the browser.
+-->
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 11 Notes</title>
+   <!--
+    Justin Serafin
+    Module 13 Lesson Notes
+    5/24/2023
+   -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <style>
+    body{
+
+      line-height: 2em;
+      max-width: 85%;
+      margin: auto;
+      background-color: blanchedalmond;
+      font-family: Helvetica, sans-serif;
+    }
+
+    h1, h2{
+      font-weight: 400;
+      padding: 10px;
+    }
+
+    h1{
+      text-align: center;
+    }
+    
+    @media screen and (min-width: 750px) {
+      h1 {font-size: 2em;}
+      h2 {font-size: 1.75em;}
+      h3 {font-size: 1.50em;}
+      p, ul {font-size: 1.25em;}
+    } 
+
+    @media screen and (max-width: 749px) {
+      h1 {font-size: 1.75em;}
+      h2 {font-size: 1.50em;}
+      h3 {font-size: 1.25em;}
+      p, ul { font-size: 1.1em;}
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Module 12 Notes</h1>
+
+  <h2 class="w3-red">Lesson 25: JavaScript Best Practices</h2>
+
+  <p>What You’ll Learn in This Lesson</p>
+  <ul class="w3-ul w3-border w3-sand">
+    <li>How HTML forms work</li>
+    <li>How to create the front end of an HTML form</li>
+    <li>How to name pieces of form data</li>
+    <li>How to include hidden data in forms</li>
+    <li>How to choose the correct form input controls for different situations</li>
+    <li>How to validate form data</li>
+    <li>How to submit form data</li>
+    <li>How to use the form object with JavaScript</li>
+  </ul>
+
+  <!--Summary-->
+  <p>
+    An HTML form is a certain section of a webpage where users can input information. In most cases,
+    information entered in a form is sent server-side or to a back-end for processing. In a textbox form, 
+    a button is either supplied by <code>input</code> tag (when "submit" chosen as <code>type</code>),
+    or can be customized by you as an image. In the <code>form</code> tag, you can specify a URL to send
+    the inputted information, which is usually a script that dictates how the information will be processed.
+    The most popular server-side script to process inputted information is PHP.
+  </p>
+
+  <p>
+    All HTML forms begin with the <code>form</code> tag, which typically has three attributes: 
+    <code>name</code>, <code>method</code>, and <code>action</code>. <code>method</code> indicates 
+    what format the inputted information should be in, document or URL query string, and <code>action</code> 
+    is how you specify the URL to send the information. Within the <code>form</code> tag, you place the 
+    <code>input</code> tag to prompt the user for information, although the <code>input</code> tag is not
+    required to be nested within the <code>form</code> tag. The <code>input</code> tag has the following
+    common attribute, <code>name</code>, <code>type</code>, <code>placeholder</code>, <code>required</code>,
+    <code>placeholder</code>, and <code>autofocus</code>. Other available attributes for the 
+    <code>input</code> include the <code>size</code> and the <code>maxlength</code> attributes.
+  </p>
+
+  <p>
+    The <code>name</code> attribute in the <code>input</code> tag can also be used as a variable name
+    that can be referred to in JavaScript. The <label>tag</label> allows you to add a caption for a 
+    <code>input</code> tag and provide additional context for the web element. The <code>fieldset</code>
+    and the <code>legend</code> tags are used to provide a caption and context for a grouping of form
+    elements, with <code>fieldset</code> defining the group and <code>legend</code> providing the caption
+    and context. The <code>type = hidden</code> attribute for <code>input</code> allows you to send
+    additional form data that isn't publicly visible to the user on the webpage. Besides the text box,
+    there are other form designs you can use to prompt the user to enter data.
+  </p>
+
+  <p>
+    One common form design is the checkbox, which allows you to check any number of checkboxes, and the
+    corresponding data associated with the checked boxes can be stored in an array or as a separate variable
+    for each checkbox. The <code>checkbox</code> object has 4 properties: <code>name</code>, <code>value</code>
+    for a checked box, <code>defaultChecked</code> to indicate the default state for a checkbox, and 
+    <code>checked</code> is specifies the default state and is a boolean value. Another form design is the
+    radio button, where a user chooses one choice for a list of options. The radio button object, named
+    <code>radio</code>, also has a <code>name</code>, <code>value</code>, <code>defaultChecked</code>, 
+    and <code>checked</code> properties, as well as a <code>length</code> property, indicating the number
+    of radio buttons. <code>radio</code> is an array object and each individual radio button and its data
+    is accessed by an index number. A radio button has a <code>click</code> method and a <code>onClick</code>
+    event handler.
+  </p>
+
+  <p>
+    Yet another form design that is commonly used is the selection list, which is defined with the 
+    <code>select</code> tag, and the options in the list are defined with the <code>option</code> tag.
+    The <code>size</code> attribute for <code>select</code> determines how many items appear before
+    scrolling down, and the <code>multiple</code> attribute allows you to select multiple items. The
+    <code>select</code> object has the following properties: <code>name</code>, <code>length</code> for
+    the number of options and <code>selectedIndex</code> for the index of the currently selected option,
+    or the first selected item for multiple selection. The <code>options</code> object has the following
+    properties: <code>index</code> for the index of the array, <code>defaultSelected</code> for the state
+    of the <code>selected</code> attribute, <code>selected</code> to set the state of the option, 
+    <code>name</code>, and <code>text</code> to display text for option. <code>optgroup</code> allows
+    you to group options together in custom categories.
+  </p>
+
+  <p>
+    While <code>&lt;input type="text"&gt;</code> can allow you to input one line of text, the 
+    <code>textarea</code> tag can allow to input multiple lines of text. <code>textarea</code> has both
+    <code>rows</code> and <code>cols</code> attribute that determines the size of the textbox in lines of 
+    text, and a scrollbar will appear if you exceed the amount of text that can fit in the display area. 
+    Both the <code>text</code> and the <code>textarea</code> object (as well as the <code>select</code>
+    object) have the <code>blur</code> and the <code>focus</code> methods, which sets and removes where the
+    cursor is respectively. In addition, there is also the <code>select</code> method, which selects all the 
+    text in the field, as well as event handlers for focus (<code>onFocus</code>), blur (<code>onBlur</code>),
+    select (<code>onSelect</code>), and for modifying text and moving away from the textbox 
+    (<code>onChange</code>).
+  </p>
+
+  <p>
+    There are several other type of form designs available with the <code>input type</code> attribute, 
+    including <code>email</code>, <code>file</code>, <code>number</code>, <code>range</code>, 
+    <code>search</code>, and <code>url</code>. You can use the <code>datalist</code> tag to add a selection
+    of suggested text that the user can click on to input into a textbox. With some of the form designs 
+    available in <code>input</code>, data validation is available by default with HTML5, given you don't
+    use the <code>novalidate</code> attribute in <code>form</code>. Another form of data validation is
+    through the <code>pattern</code> in <code>input</code>, which uses regular expressions to only accept
+    input that matches the specified regular expression. It is common to include buttons to submit or clear
+    data with <code>submit</code> and <code>clear</code> for the <code>type</code> attribute in 
+    <code>input</code>. You can also use <code>type="image"</code> to make a custom button based on an image,
+    or use <code>type="button"</code> that does nothing by default when you click on it, so you can add an
+    event listener yourself.
+  </p> 
+
+  <p>
+    The <code>button</code> tag is another way to make buttons to submit information input in a form,
+    and also has the <code>reset</code>, <code>button</code> and the <code>button</code> values available
+    for the <code>type</code> attribute. With the exception of Internet Explorer and Edge, browsers support
+    the <code>output</code> tag where you can describe the output of a form, including any error messages.
+    The <code>form</code> object has itself a <code>submit</code> and a <code>reset</code> method, as well
+    as event handlers for these actions, <code>onSubmit</code> and <code>onReset</code>. With the
+    aforementioned event handlers, you can prevent the data from being submitted or cleared when the
+    appropriate button is clicked.
+  </p>
+
+  <p>
+    To access <code>form</code> objects in JavaScript you can use the <code>document</code> object, and
+    the '.' operator to access its derived objects, properties and methods. The brackets "[]" are necessary
+    to access a certain index in array objects, like <code>elements</code>. The <code>getElementById</code>
+    method will be useful to assign form objects to a variable name so you can write cleaner code.
+  </p>
+
+  <h3>Chapter Reflection</h3>
+  <p>
+    This chapter is probably the most important for me when it comes to learning web development. Almost all
+    modern websites have sophisticated forms for users to input information for many reasons, like logging in,
+    making an account, and entering payment information for online shopping. Of particular interest for me is
+    how you access the forms objects, its properties and methods to create robust scripts. Another thing  
+    mentioned in the chapter, but will have to look into more, is learning PHP to see how inputted
+    information can be processed server-side. The final thing, albeit a small thing, to look into is the 
+    <code>optgroup</code> tag to categorize and group selection lists, which can help users input 
+    correct information.
+  </p>
+
+</body>
+</html>
